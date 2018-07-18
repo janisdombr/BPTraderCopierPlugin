@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "BPTraderCopierPlugin",
+  "description": "Copies all trade actions to multiply accounts",
+  "version": "0.1",
+  "permissions": [
+    "https://www.bitmex.com/*",
+    "http://test.myexpert.lv/*",
+    "contextMenus",
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "*://www.bitmex.com/*" ],
+      "js": [ "bm_inject.js" ]
+    }
+  ],
+  "browser_action": {
+    "default_title": "BPTraderCopierPlugin",
+    "default_icon": "tildafavicon.png",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": [ "sha256.min.js", "ccxt.browser.js", "api.js", "background.js" ],
+    "persistent": false
+  }
+}

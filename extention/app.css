@@ -1,0 +1,23 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    min-width: 250px;
+}
+
+span {
+    font-style: italic;
+}
+span {
+    float: left;
+    padding-right: 10px;
+}
+.field {
+    clear: both;
+    text-align: right;
+    line-height: 25px;
+}
+.form {
+    float: left;
+}
+input.inputx {
+    width: 20px;
+}
